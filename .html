@@ -1,0 +1,44 @@
+<html>
+     <head><center><font size=08 color="#FF0040"></head>
+     <title>HTML</title>
+     <body background="gk.jpg"></body>
+     <body><font face="Courier"><b>Agora partiu calcular nessa porra.</body></center>
+     <marquee behavior="alternate"> KAMEHAMEHAAAAAAAA !!!<img src="goku-kamehameha-gif-6.gif" width=300 height=300></img></marquee>
+     <hr><form name="calculadora">
+     <br>Digite o 1º número
+     <input type="text" name="txtn1">
+     <br>Digite o 2º número
+     <input type="text" name="txtn2">
+     <br>Soma
+     <input type="text" name="txtsoma">
+     <br>Subtração
+     <input type="text" name="txtsubtracao">
+     <br>Multiplicação
+     <input type="text" name="txtmultiplicacao">
+     <br>Divisão
+     <input type="text" name="txtdivisao">
+     <input type="button" name="btncalcular" value="Calcular" onclick="calc(txtn1.value,txtn2.value)">
+     <input type="reset" name="btnlimpar" value="Limpar"><br></font>
+</form>
+<script>
+     function calc(n1,n2)
+     {
+          r = parseFloat(n1) + parseFloat(n2);
+          calculadora.txtsoma.value=r;
+          r = parseFloat(n1) - parseFloat(n2);
+          calculadora.txtsubtracao.value=r;
+          r = parseFloat(n1) * parseFloat(n2);
+          calculadora.txtmultiplicacao.value=r;
+          if (n2 == 0)
+          calculadora.txtdivisao.value="N�o existe divis�o por Zero!!!";
+     else
+     {
+          r=parseFloat(n1) / parseFloat(n2);
+          calculadora.txtdivisao.value=r;
+     }
+          r = parseFloat(n1) / parseFloat(n2);
+          calculadora.txtdivisao.value=r;
+      }
+</script>
+</body>
+</html>
